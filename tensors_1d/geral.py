@@ -1,4 +1,5 @@
 import torch
+import numpy as np
 
 a = torch.tensor([0,1,2,3,4]) # criar tensor
 
@@ -33,3 +34,10 @@ e = torch.Tensor([0,1,2,3,4,5])
 e_col = e.view(6,1) #tamnanho x e y
 # ou
 e_col = e.view(-1,1)
+
+# convertendo np array para tensores
+
+numpy_array = np.array([0.0,1.0,2.0,3.0,4.0])
+torch_tensor = torch.from_numpy(numpy_array)
+# converter de novo para numpy
+back_numpy=torch_tensor.numpy()
